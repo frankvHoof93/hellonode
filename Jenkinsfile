@@ -27,7 +27,7 @@ node {
      //   sh "docker image ls"
      //   sh "docker image prune -a"
                 echo "Hello World!"
-                sh "echo Hello from the shell"
+                bat "echo Hello from the shell"
                 sh "hostname"
                 sh "uptime"
     }

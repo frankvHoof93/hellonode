@@ -24,6 +24,6 @@ node {
         }	
     }
     stage('Remove Local Docker Image') {
-        sh 'docker image prune -a'
+        sh 'java -version'
     }
 }

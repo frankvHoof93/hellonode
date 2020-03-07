@@ -13,7 +13,7 @@ node {
 
         app = docker.build("frankvhoof/hellonode")
     }
-stage('Push image') {	   7
+    stage('Push image') {	   7
         /* Finally, we'll push the image with two tags:	
          * First, the incremental build number from Jenkins	
          * Second, the 'latest' tag.	
@@ -22,5 +22,10 @@ stage('Push image') {	   7
             app.push("${env.BUILD_NUMBER}")	
             app.push("latest")	
         }	
+    }
+    stage('Remove Local Docker Image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
+      }
     }
 }

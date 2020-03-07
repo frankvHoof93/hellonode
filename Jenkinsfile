@@ -24,8 +24,8 @@ node {
         }	
     }
     stage('Remove Local Docker Image') {
-        sh "docker image ls"
-        sh "docker image prune -a"
-        sh "echo 'HELLOWORLD'"
+     //   sh "docker image ls"
+     //   sh "docker image prune -a"
+        sh 'echo a'
     }
 }

@@ -24,6 +24,6 @@ node {
         }	
     }
     stage('Remove Local Docker Image') {
-        docker image prune --all
+        docker image prune -a
     }
 }

@@ -24,6 +24,6 @@ node {
         }	
     }
     stage('Remove Local Docker Image') {
-        sh "docker rmi frankvhoof/hellonode:${env.BUILD_NUMBER}"
+        docker rmi frankvhoof/hellonode:${env.BUILD_NUMBER}
     }
 }

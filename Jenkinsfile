@@ -1,6 +1,6 @@
 node {
     def app
-
+    def registry = "frankvhoof/hellonode"
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("frankvhoof/hellonode")
+        app = docker.build($registry)
     }
     stage('Push image') {	   7
         /* Finally, we'll push the image with two tags:	

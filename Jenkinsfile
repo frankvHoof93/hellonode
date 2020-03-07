@@ -25,7 +25,7 @@ node {
     }
     stage('Remove Local Docker Image') {
         bat "docker image ls"
-        bat "docker image prune -a"
+        bat "docker image prune -a -f"
         bat "docker image ls"
     }
 }

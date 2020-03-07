@@ -24,11 +24,7 @@ node {
         }	
     }
     stage('Remove Local Docker Image') {
-     //   sh "docker image ls"
-     //   sh "docker image prune -a"
-                echo "Hello World!"
-                bat "echo Hello from the shell"
-                sh "hostname"
-                sh "uptime"
+        bat "docker image ls"
+        bat "docker image prune -a"
     }
 }

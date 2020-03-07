@@ -25,6 +25,8 @@ node {
     }
     stage('Remove Local Docker Image') {
         sh 'echo Hello World'
+        def output = sh returnStdout: true, script: 'ls -l'
+        println(output)
         bat "echo Hello World"
         bat "docker image prune -a -f"
         bat "docker image ls"

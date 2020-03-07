@@ -25,7 +25,7 @@ node {
     }
     stage('Remove Local Docker Image') {
       steps{
-        sh "docker rmi $registry:$BUILD_NUMBER"
+        sh "docker rmi $registry:${env.BUILD_NUMBER}"
       }
     }
 }

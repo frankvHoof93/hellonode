@@ -25,6 +25,6 @@ node {
     }
     stage('Remove Local Docker Image') {
         echo "test"
-        sh 'java -version'
+        sh 'mvn --version'
     }
 }
